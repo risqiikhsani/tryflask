@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello_world():
     return "<p>Hello, World!</p>"
 
+@app.route("/hello")
+def hello():
+    return "<p>Hello</p>"
+
 
 @app.route('/user/<username>')
 def show_user_profile(username):

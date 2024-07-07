@@ -1,0 +1,13 @@
+docker build -t flask-hello-app .
+
+docker tag flask-hello-app your-dockerhub-username/flask-hello-app:latest
+or
+docker tag flask-hello-app your-dockerhub-username/flask-hello-app:v2
+
+docker push your-dockerhub-username/flask-hello-app:latest
+or
+docker push your-dockerhub-username/flask-hello-app:v2
+
+# Step 4: Pull the Docker image from Docker Hub (on another machine or after a logout)
+docker pull your-dockerhub-username/flask-hello-app:latest
+
